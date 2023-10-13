@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ドロップダウンリストで選択された値を取得する</title>
+  <script>
+    function getSelectedValue() {
+      var selectElement = document.getElementById("prefectures");
+      var selectedValue = selectElement.options[selectElement.selectedIndex].value;
+      alert("選択された都道府県: " + selectedValue);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <select id="prefectures">
+      <option value="tokyo">東京都</option>
+      <option value="kanagawa">神奈川県</option>
+      <option value="osaka">大阪府</option>
+      <!-- 他の都道府県も追加してください -->
+    </select>
+    <button type="button" onclick="getSelectedValue()">選択された都道府県を取得</button>
+  </form>
+</body>
+</html>
